@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,12 +13,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,9 +37,9 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => SingleChildLayoutPage()),
                 );
               },
-              child: Text('Single-Child Layout'),
+              child: const Text('Single-Child Layout'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -55,11 +57,12 @@ class HomePage extends StatelessWidget {
 }
 
 class SingleChildLayoutPage extends StatelessWidget {
+  const SingleChildLayoutPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Single-Child Layout'),
+        title: const Text('Single-Child Layout'),
       ),
       body: // Place yourSingle-child layout layout here 
       
@@ -68,6 +71,7 @@ class SingleChildLayoutPage extends StatelessWidget {
 }
 
 class MultiChildLayoutPage extends StatelessWidget {
+  const MultiChildLayoutPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
